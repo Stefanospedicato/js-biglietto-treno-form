@@ -30,16 +30,19 @@ generaPrezzo.addEventListener('click', () =>{
   const kms= parseFloat(km.value);
   price = (prezzoKm * kms).toFixed(2);
   
-  if (minorenne) {sconto = 20 / 100;
+  if (fasciaEta.value==='minorenne') {sconto = 0.2;
     offerta.innerHTML = 'Sconto Young'
   }
-  else if (over) {sconto = 40 / 100;
+  else if (fasciaEta.value==='over') {sconto = 0.4;
     offerta.innerHTML = 'Sconto Over'
   }
-  else{offerta.innerHTML = 'Tariffa Standard'
+  else{sconto=0;
+    offerta.innerHTML = 'Tariffa Standard'
   }
   
-  let prezzoScontato = (price * (1 - sconto)).toFixed(2);
+  let prezzoScontato =(price * (1 - sconto)).toFixed(2);
+  price = prezzoScontato
+  console.log(prezzoScontato)
   
   fullname.innerHTML = username.value.toUpperCase()
   carrozza.innerHTML = random10();
@@ -51,11 +54,10 @@ generaPrezzo.addEventListener('click', () =>{
 reset.addEventListener('click', ()=>{
   km.value = '';
   username.value='';
-  fasciaEta.value='Seleziona la tua età';
-  offerta.value ='';
-  fullname.value ='';
-  carrozza.value='';
-  codice.value='';
+  fullname.innerHTML = '-'
+  carrozza.innerHTML = '-';
+  codice.innerHTML ='-';
+  prezzoFinale.innerHTML ='-';
   card.classList.toggle('hide')
 })
 
