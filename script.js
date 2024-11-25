@@ -30,15 +30,16 @@ generaPrezzo.addEventListener('click', () =>{
   const kms= parseFloat(km.value);
   price = (prezzoKm * kms).toFixed(2);
   
-  if (minorenne.checked) {sconto = 20 / 100;
+  if (minorenne) {sconto = 20 / 100;
     offerta.innerHTML = 'Sconto Young'
   }
-  else if (over.checked) {sconto = 40 / 100;
+  else if (over) {sconto = 40 / 100;
     offerta.innerHTML = 'Sconto Over'
   }
-  else{ offerta.innerHTML = 'Tariffa Standard'
+  else{offerta.innerHTML = 'Tariffa Standard'
   }
-  let prezzoScontato = price * (1 - sconto);
+  
+  let prezzoScontato = (price * (1 - sconto)).toFixed(2);
   
   fullname.innerHTML = username.value.toUpperCase()
   carrozza.innerHTML = random10();
