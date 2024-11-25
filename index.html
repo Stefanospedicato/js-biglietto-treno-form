@@ -8,14 +8,40 @@
 </head>
 <body>
 
-  <input type="text" id="nome-cognome">
-  <input type="number" id="km">
-  <select id="anni-cliente" name="scelta">
-     <option value="opzione1">Opzione 1</option> <option value="opzione2">Opzione 2</option> <option value="opzione3">Opzione 3</option> 
-   </select>
+  <div class="container">
+    <input type="text" id="nome-cognome" value="">
+    <input type="number" id="km" value="">
+    <select id="anni-cliente" name="scelta">
+     <option value="opzione1" id="maggiorenne">Maggiorenne</option> 
+     <option value="opzione2" id="minorenne">Minorenne</option> 
+     <option value="opzione3" id="over">Over65</option> 
+    </select>
 
-   <button>GENERA</button>
-   <button>ANNULLA</button>
+    <button id="genera">GENERA</button>
+   <button id="reset">ANNULLA</button>
+  </div>
+
+  <div class="container ticket d-none">
+    <div class="row">
+      <div class="col" id="fullname">
+        <h3>NOME PASSEGGERO:</h3>
+      </div>
+      <div class="col">
+        <div class="col" id="offerta">
+          <h4>OFFERTA</h4>
+        </div>
+        <div class="col" id="carrozza">
+          <h4>CARROZZA</h4>
+        </div>
+        <div class="col" id="codice">
+          <h4>CODICE CP</h4>
+        </div>
+        <div class="col" id="prezzo">
+          <h4>COSTO BIGLIETTO</h4>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
