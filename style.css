@@ -5,6 +5,7 @@
 }
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: black;
 }
 
 .hide{
@@ -12,17 +13,18 @@ body{
 }
 
 .container{
-  max-width: 1200px;
+  width: 1200px;
   border: 5px solid black;
   border-radius: 30px;
   padding: 50px;
-  background-color: blanchedalmond;
+  background-color: rgb(255, 29, 101);
   justify-content: space-between;
   margin: 50px auto;
 }
 
 .container.ticket{
-  background-color: burlywood;
+  background-color: rgb(37, 121, 211);
+  color: white;
 }
 
 input , select{
@@ -31,7 +33,7 @@ input , select{
 }
 
 button{
-  padding: 10px;
+  padding: 15px 100px;
   border-radius: 10px;
   background-color: black;
   font-weight: bold;
