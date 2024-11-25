@@ -3,7 +3,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .hide{
   display: none;
+}
+
+.container{
+  max-width: 1200px;
+  border: 5px solid black;
+  border-radius: 30px;
+  margin: 50px;
+  padding: 50px;
+  background-color: blanchedalmond;
+  justify-content: space-between;
+}
+
+.container.ticket{
+  background-color: burlywood;
+}
+
+input , select{
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  font-weight: bold;
+  color: white;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container.ticket .row .col{
+  margin: 30px;
+}
+
+.container.ticket .row .col div{
+  margin-top: 20px;
 }
